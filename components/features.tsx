@@ -1,5 +1,5 @@
 import {
-  Waveform,
+  AudioWaveform,
   Sparkles,
   BarChart3,
   GitCompare,
@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 
 const features = [
   {
-    icon: Waveform,
+    icon: AudioWaveform,
     title: "Visual Waveform Timeline",
     description:
       "Every section of your song is color-coded on a zoomable waveform timeline. See your Intro, Verses, Choruses, Bridge, and Outro at a glance.",

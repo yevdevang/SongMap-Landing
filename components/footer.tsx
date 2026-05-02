@@ -1,11 +1,10 @@
 import Link from "next/link";
-import { Music2, Twitter, Github, Mail } from "lucide-react";
+import Image from "next/image";
 
 const footerLinks = {
   Product: [
     { label: "Features", href: "/#features" },
     { label: "How It Works", href: "/#how-it-works" },
-    { label: "Pricing", href: "/#pricing" },
   ],
   Legal: [
     { label: "Privacy Policy", href: "/privacy" },
@@ -25,32 +24,13 @@ export function Footer() {
           {/* Brand column */}
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4 group w-fit">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-primary flex items-center justify-center shadow-lg shadow-accent/20">
-                <Music2 className="w-4 h-4 text-white" />
-              </div>
+              <Image src="/1024.png" alt="SongMap" width={32} height={32} className="rounded-lg" />
               <span className="text-white font-bold text-lg tracking-tight">SongMap</span>
             </Link>
             <p className="text-gray-500 text-sm leading-relaxed max-w-xs mb-6">
               AI-powered song structure analyzer for iOS. Understand your music
               like never before.
             </p>
-            {/* Social links */}
-            <div className="flex gap-3">
-              {[
-                { icon: Twitter, href: "#", label: "Twitter" },
-                { icon: Github, href: "#", label: "GitHub" },
-                { icon: Mail, href: "mailto:support@songmapapp.com", label: "Email" },
-              ].map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-9 h-9 rounded-lg border border-white/10 flex items-center justify-center text-gray-500 hover:text-white hover:border-white/20 transition-colors"
-                >
-                  <social.icon className="w-4 h-4" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Link columns */}
@@ -88,14 +68,6 @@ export function Footer() {
             © {new Date().getFullYear()} SongMap. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-xs text-gray-600">
-            <Link href="/privacy" className="hover:text-gray-400 transition-colors">
-              Privacy
-            </Link>
-            <span>·</span>
-            <Link href="/terms" className="hover:text-gray-400 transition-colors">
-              Terms
-            </Link>
-            <span>·</span>
             <span>Made for musicians 🎵</span>
           </div>
         </div>

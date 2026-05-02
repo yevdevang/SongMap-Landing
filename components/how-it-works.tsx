@@ -90,25 +90,6 @@ export function HowItWorks() {
           </div>
         </div>
 
-        {/* Bottom section stats */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { value: "8+", label: "Section types detected" },
-            { value: "<5s", label: "Average analysis time" },
-            { value: "100%", label: "On-device privacy" },
-            { value: "∞", label: "Cached song analyses" },
-          ].map((stat, i) => (
-            <div
-              key={i}
-              className="text-center p-6 rounded-2xl glass-card"
-            >
-              <div className="text-3xl font-bold gradient-text mb-1">
-                {stat.value}
-              </div>
-              <div className="text-sm text-gray-500">{stat.label}</div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
