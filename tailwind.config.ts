@@ -51,11 +51,12 @@ const config: Config = {
           900: "#164E63",
         },
         surface: {
-          DEFAULT: "#0D1526",
-          2: "#152035",
+          DEFAULT: "rgb(var(--surface) / <alpha-value>)",
+          2: "rgb(var(--surface-2) / <alpha-value>)",
         },
-        background: "#050B14",
-        "muted-foreground": "#9CA3AF",
+        background: "rgb(var(--background) / <alpha-value>)",
+        foreground: "rgb(var(--foreground) / <alpha-value>)",
+        "muted-foreground": "rgb(var(--muted-foreground) / <alpha-value>)",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],

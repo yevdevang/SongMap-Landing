@@ -11,8 +11,8 @@ const badgeVariants = cva(
         secondary: "bg-secondary/20 text-secondary-300 border border-secondary/30",
         accent: "bg-accent/20 text-accent border border-accent/30",
         success: "bg-green-500/20 text-green-400 border border-green-500/30",
-        pro: "bg-gradient-to-r from-secondary/30 to-accent/30 text-white border border-secondary/40",
-        outline: "text-foreground border border-white/20",
+        pro: "bg-gradient-to-r from-secondary/30 to-accent/30 text-gray-900 dark:text-white border border-secondary/40",
+        outline: "text-foreground border border-black/20 dark:border-white/20",
       },
     },
     defaultVariants: {

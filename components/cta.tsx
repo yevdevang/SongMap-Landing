@@ -13,14 +13,7 @@ export function CTA() {
       <div className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-secondary/10 blur-[80px]" />
 
       <div className="section-container relative z-10">
-        <div
-          className="rounded-3xl p-12 text-center"
-          style={{
-            background: "rgba(13,21,38,0.8)",
-            border: "1px solid rgba(6,182,212,0.2)",
-            backdropFilter: "blur(20px)",
-          }}
-        >
+        <div className="rounded-3xl p-12 text-center bg-surface/80 backdrop-blur-xl border border-accent/20">
           {/* Icon */}
           <div className="flex justify-center mb-6">
             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent to-primary flex items-center justify-center shadow-xl shadow-accent/20">
@@ -28,10 +21,10 @@ export function CTA() {
             </div>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Ready to map your music?
           </h2>
-          <p className="text-gray-400 text-lg max-w-xl mx-auto mb-8">
+          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-xl mx-auto mb-8">
             Join thousands of musicians, producers, and music enthusiasts who
             use SongMap to understand and improve their arrangements.
           </p>
@@ -48,7 +41,7 @@ export function CTA() {
             </Button>
           </div>
 
-          <p className="mt-6 text-sm text-gray-600">
+          <p className="mt-6 text-sm text-gray-500 dark:text-gray-600">
             Free · iOS 17+ · No credit card required
           </p>
         </div>

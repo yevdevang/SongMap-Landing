@@ -39,11 +39,11 @@ export function HowItWorks() {
           <p className="text-accent text-sm font-semibold tracking-widest uppercase mb-3">
             How It Works
           </p>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             From track to insights{" "}
             <span className="gradient-text">in seconds</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             No music theory knowledge required. Import your song, wait a few
             seconds, and get a complete structural breakdown.
           </p>
@@ -52,7 +52,7 @@ export function HowItWorks() {
         {/* Steps */}
         <div className="relative">
           {/* Connector line (desktop) */}
-          <div className="hidden lg:block absolute top-[52px] left-[calc(16.67%+32px)] right-[calc(16.67%+32px)] h-px bg-gradient-to-r from-accent/30 via-primary/40 to-secondary/30" />
+          <div className="hidden lg:block absolute top-[52px] left-[calc(16.67%+32px)] right-[calc(16.67%+32px)] h-px bg-gradient-to-r from-accent/30 via-primary/40 to-secondary/30" style={{ zIndex: -1 }} />
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6">
             {steps.map((step, i) => {
@@ -61,27 +61,30 @@ export function HowItWorks() {
                 <div key={i} className="flex flex-col items-center text-center">
                   {/* Icon circle */}
                   <div
-                    className="relative w-[104px] h-[104px] rounded-full flex items-center justify-center mb-6 z-10"
+                    className="relative w-[104px] h-[104px] rounded-full flex items-center justify-center mb-6"
                     style={{
-                      background: step.bg,
                       border: `2px solid ${step.color}30`,
                       boxShadow: `0 0 30px ${step.color}15`,
                     }}
                   >
-                    <Icon className="w-8 h-8" style={{ color: step.color }} />
+                    {/* Opaque background to block the connector line */}
+                    <div className="absolute inset-0 rounded-full bg-background" />
+                    {/* Tint overlay */}
+                    <div className="absolute inset-0 rounded-full" style={{ background: step.bg }} />
+                    <Icon className="relative w-8 h-8 z-10" style={{ color: step.color }} />
                     {/* Step number badge */}
                     <div
-                      className="absolute -top-1 -right-1 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white"
+                      className="absolute -top-1 -right-1 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white z-10"
                       style={{ background: step.color }}
                     >
                       {i + 1}
                     </div>
                   </div>
 
-                  <h3 className="text-white font-semibold text-xl mb-3">
+                  <h3 className="text-gray-900 dark:text-white font-semibold text-xl mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed max-w-xs">
                     {step.description}
                   </p>
                 </div>

@@ -15,9 +15,16 @@ const sections = [
 ];
 
 const waveHeights = [
-  30, 55, 70, 45, 80, 60, 35, 75, 50, 65, 40, 85, 55, 70, 45, 60,
-  35, 80, 55, 70, 40, 65, 50, 75, 45, 60, 80, 35, 65, 50, 70, 45,
-  55, 80, 40, 65, 75, 50, 60, 35, 70, 45, 85, 55, 40, 65, 80, 50,
+  20, 35, 50, 30, 45, 60, 25, 40, 55, 35, 50, 65, 30, 48, 38, 55,
+  28, 42, 58, 35, 48, 70, 40, 55, 32, 45, 62, 38, 52, 42, 60, 35,
+  48, 65, 42, 56, 38, 50, 68, 44, 58, 36, 50, 72, 46, 60, 40, 54,
+  75, 55, 80, 62, 70, 85, 65, 78, 58, 72, 68, 82, 60, 75, 55, 70,
+  88, 72, 65, 80, 58, 75, 85, 62, 78, 70, 90, 68, 82, 72, 60, 76,
+  85, 70, 78, 65, 88, 75, 62, 80, 70, 85, 65, 72, 78, 60, 75, 68,
+  80, 65, 72, 58, 75, 62, 68, 78, 55, 70, 60, 72, 65, 58, 68, 62,
+  52, 65, 48, 60, 55, 70, 45, 58, 65, 50, 62, 55, 68, 48, 58, 52,
+  40, 55, 45, 60, 38, 52, 48, 62, 35, 50, 45, 58, 32, 48, 42, 55,
+  28, 42, 38, 50, 25, 40, 35, 48, 22, 38, 32, 45, 20, 35, 28, 42,
 ];
 
 export function Hero() {
@@ -40,14 +47,14 @@ export function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 leading-[1.1]">
             See Your Song&apos;s{" "}
             <span className="gradient-text">Structure</span>{" "}
             Like Never Before
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
             SongMap analyzes any track and maps every Intro, Verse, Chorus, and Bridge
             in seconds. Get a visual waveform timeline and AI-powered arrangement feedback
             — all in one beautiful iOS app.
@@ -72,7 +79,7 @@ export function Hero() {
           </div>
 
           {/* Social proof */}
-          <div className="flex items-center justify-center gap-2 text-sm text-gray-500 mb-16">
+          <div className="flex items-center justify-center gap-2 text-sm text-gray-500 dark:text-gray-500 mb-16">
             <div className="flex">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
@@ -82,6 +89,14 @@ export function Hero() {
           </div>
 
           {/* Waveform visualization */}
+          <div className="flex justify-end mb-2">
+            <div className="flex items-center gap-1.5 bg-secondary/20 border border-secondary/30 rounded-full px-3 py-1">
+              <Sparkles className="w-3 h-3" style={{ color: "#8B5CF6" }} />
+              <span className="text-xs font-medium" style={{ color: "#8B5CF6" }}>
+                AI Feedback Ready
+              </span>
+            </div>
+          </div>
           <div className="relative rounded-2xl overflow-hidden glass-card glow-border p-6">
             {/* Section blocks */}
             <div className="flex rounded-lg overflow-hidden mb-3" style={{ height: "28px" }}>
@@ -101,9 +116,8 @@ export function Hero() {
             </div>
 
             {/* Waveform bars */}
-            <div className="flex items-center gap-px" style={{ height: "80px" }}>
+            <div className="flex items-center" style={{ height: "80px", gap: "1.5px" }}>
               {waveHeights.map((h, i) => {
-                // Find which section this bar belongs to
                 const sectionIdx = Math.floor((i / waveHeights.length) * sections.length);
                 const color = sections[Math.min(sectionIdx, sections.length - 1)].color;
                 return (
@@ -123,14 +137,14 @@ export function Hero() {
 
             {/* Playhead */}
             <div
-              className="absolute top-6 bottom-6 w-0.5 bg-white/80 rounded-full"
+              className="absolute top-6 bottom-6 w-0.5 bg-gray-800/70 dark:bg-white/80 rounded-full"
               style={{ left: "38%" }}
             >
-              <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-white shadow-lg shadow-white/30" />
+              <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-gray-800 dark:bg-white shadow-lg shadow-gray-800/20 dark:shadow-white/30" />
             </div>
 
             {/* Time labels */}
-            <div className="flex justify-between mt-3 text-xs text-gray-500 font-mono">
+            <div className="flex justify-between mt-3 text-xs text-gray-500 dark:text-gray-500 font-mono">
               <span>0:00</span>
               <span>1:00</span>
               <span>2:00</span>
@@ -138,13 +152,7 @@ export function Hero() {
               <span>3:42</span>
             </div>
 
-            {/* AI feedback badge */}
-            <div className="absolute top-4 right-4 flex items-center gap-1.5 bg-secondary/20 border border-secondary/30 rounded-full px-3 py-1">
-              <Sparkles className="w-3 h-3 text-secondary-300" style={{ color: "#8B5CF6" }} />
-              <span className="text-xs font-medium" style={{ color: "#C4B5FD" }}>
-                AI Feedback Ready
-              </span>
-            </div>
+
           </div>
         </div>
       </div>

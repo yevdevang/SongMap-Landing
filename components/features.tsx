@@ -99,11 +99,11 @@ export function Features() {
           <p className="text-accent text-sm font-semibold tracking-widest uppercase mb-3">
             Features
           </p>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Everything you need to{" "}
             <span className="gradient-text">understand music</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             From automatic section detection to AI-powered arrangement advice,
             SongMap gives you a complete picture of any song.
           </p>
@@ -131,7 +131,7 @@ export function Features() {
                     className="absolute top-4 right-4 text-[10px] font-bold tracking-wider px-2 py-0.5 rounded-full"
                     style={{
                       background: "rgba(139,92,246,0.2)",
-                      color: "#C4B5FD",
+                      color: "#8B5CF6",
                       border: "1px solid rgba(139,92,246,0.3)",
                     }}
                   >
@@ -144,10 +144,10 @@ export function Features() {
                 >
                   <Icon className="w-5 h-5" style={{ color: feature.color }} />
                 </div>
-                <h3 className="text-white font-semibold text-base mb-2">
+                <h3 className="text-gray-900 dark:text-white font-semibold text-base mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                   {feature.description}
                 </p>
               </div>
