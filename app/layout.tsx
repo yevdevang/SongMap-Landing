@@ -75,6 +75,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       { url: "/1024.png", sizes: "any", type: "image/png" },
     ],
     apple: [{ url: "/1024.png", sizes: "1024x1024" }],
@@ -100,6 +101,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+        <link rel="icon" href="/1024.png" type="image/png" sizes="any" />
+        <link rel="apple-touch-icon" href="/1024.png" />
         {/* JSON-LD structured data */}
         <script
           type="application/ld+json"
