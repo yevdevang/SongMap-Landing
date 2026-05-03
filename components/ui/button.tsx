@@ -8,17 +8,17 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-accent text-black hover:bg-accent/90 shadow-lg shadow-accent/20 hover:shadow-accent/40",
+          "bg-[#152a50] text-white hover:bg-[#152a50]/90 shadow-lg shadow-black/10 hover:shadow-black/20 dark:bg-white dark:text-gray-900 dark:hover:bg-white/90",
         primary:
-          "bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/20",
+          "bg-[#152a50] text-white hover:bg-[#152a50]/90 shadow-lg shadow-black/10 dark:bg-white dark:text-gray-900 dark:hover:bg-white/90",
         secondary:
-          "bg-secondary text-white hover:bg-secondary/90 shadow-lg shadow-secondary/20",
+          "bg-[#152a50] text-white hover:bg-[#152a50]/90 shadow-lg shadow-black/10 dark:bg-white dark:text-gray-900 dark:hover:bg-white/90",
         outline:
-          "border border-primary/40 bg-transparent text-gray-900 dark:text-white hover:bg-primary/10 hover:border-primary/60",
+          "border border-primary/40 dark:border-white/40 bg-transparent text-gray-900 dark:text-white hover:bg-primary/10 hover:border-primary/60 dark:hover:border-white/60",
         ghost:
-          "bg-transparent text-gray-900 dark:text-white hover:bg-black/5 dark:hover:bg-white/5",
+          "bg-[#152a50] text-white hover:bg-[#152a50]/90 dark:bg-white dark:text-gray-900 dark:hover:bg-white/90",
         link:
-          "text-accent underline-offset-4 hover:underline",
+          "text-white underline-offset-4 hover:underline",
       },
       size: {
         default: "h-11 px-6 py-2",

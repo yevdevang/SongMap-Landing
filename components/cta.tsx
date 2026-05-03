@@ -1,5 +1,6 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Music2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function CTA() {
   return (
@@ -16,9 +17,7 @@ export function CTA() {
         <div className="rounded-3xl p-12 text-center bg-surface/80 backdrop-blur-xl border border-accent/20">
           {/* Icon */}
           <div className="flex justify-center mb-6">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent to-primary flex items-center justify-center shadow-xl shadow-accent/20">
-              <Music2 className="w-8 h-8 text-white" />
-            </div>
+            <Image src="/1024.png" alt="SongMap" width={64} height={64} className="rounded-2xl shadow-xl shadow-accent/20" />
           </div>
 
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
