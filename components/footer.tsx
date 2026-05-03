@@ -11,7 +11,7 @@ const footerLinks = {
     { label: "Terms of Service", href: "/terms" },
   ],
   Support: [
-    { label: "Contact Us", href: "mailto:support@songmapapp.com" },
+    { label: "Contact Us", href: "mailto:support@songmap.co" },
     { label: "App Store", href: "#" },
   ],
 };
