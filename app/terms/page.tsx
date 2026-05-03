@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 const LAST_UPDATED = "May 1, 2026";
-const CONTACT_EMAIL = "legal@songmapapp.com";
+const CONTACT_EMAIL = "support@songmap.co";
 
 export default function TermsPage() {
   return (
@@ -25,15 +25,15 @@ export default function TermsPage() {
           {/* Back link */}
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-300 transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to home
           </Link>
 
           {/* Header */}
-          <div className="mb-10 pb-8 border-b border-white/10">
-            <h1 className="text-4xl font-bold text-white mb-3">Terms of Service</h1>
+          <div className="mb-10 pb-8 border-b border-black/10 dark:border-white/10">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-3">Terms of Service</h1>
             <p className="text-gray-500 text-sm">Last updated: {LAST_UPDATED}</p>
           </div>
 
@@ -287,10 +287,10 @@ function Section({
 }) {
   return (
     <section className="mb-10">
-      <h2 className="text-xl font-semibold text-white mb-4 pb-2 border-b border-white/10">
+      <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 pb-2 border-b border-black/10 dark:border-white/10">
         {title}
       </h2>
-      <div className="text-gray-400 space-y-4 leading-relaxed text-sm [&_h3]:text-white [&_h3]:font-medium [&_h3]:text-base [&_h3]:mt-5 [&_h3]:mb-2 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_a]:text-accent [&_a]:hover:underline [&_strong]:text-gray-300 [&_address]:not-italic [&_address]:mt-2">
+      <div className="text-gray-600 dark:text-gray-400 space-y-4 leading-relaxed text-sm [&_h3]:text-gray-900 dark:[&_h3]:text-white [&_h3]:font-medium [&_h3]:text-base [&_h3]:mt-5 [&_h3]:mb-2 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-2 [&_a]:text-accent [&_a]:hover:underline [&_strong]:text-gray-800 dark:[&_strong]:text-gray-300 [&_address]:not-italic [&_address]:mt-2">
         {children}
       </div>
     </section>
