@@ -28,7 +28,6 @@ const features = [
     color: "#8B5CF6",
     bg: "rgba(139,92,246,0.08)",
     border: "rgba(139,92,246,0.2)",
-    pro: true,
   },
   {
     icon: Music,
