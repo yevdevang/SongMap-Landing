@@ -65,7 +65,7 @@ export function Navbar() {
             {mounted && (theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />)}
           </button>
           <Button size="sm" asChild>
-            <a href="#" aria-label="Download SongMap on the App Store">
+            <a href="https://apps.apple.com/il/app/songmap-ai-song-analyzer/id6762045630" aria-label="Download SongMap on the App Store">
               Download Free
             </a>
           </Button>
@@ -103,7 +103,7 @@ export function Navbar() {
                 {mounted && (theme === "dark" ? <><Sun className="w-4 h-4" /> Light Mode</> : <><Moon className="w-4 h-4" /> Dark Mode</>)}
               </button>
               <Button size="sm" className="w-full" asChild>
-                <a href="#">Download Free</a>
+                <a href="https://apps.apple.com/il/app/songmap-ai-song-analyzer/id6762045630">Download Free</a>
               </Button>
             </div>
           </div>

@@ -12,7 +12,7 @@ const footerLinks = {
   ],
   Support: [
     { label: "Contact Us", href: "mailto:support@songmap.co" },
-    { label: "App Store", href: "#" },
+    { label: "App Store", href: "https://apps.apple.com/il/app/songmap-ai-song-analyzer/id6762045630" },
   ],
 };
 
