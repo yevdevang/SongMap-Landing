@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "sw
 const syne = Syne({ subsets: ["latin"], variable: "--font-syne", weight: ["400", "600", "700", "800"], display: "swap" });
 const dmMono = DM_Mono({ subsets: ["latin"], variable: "--font-dm-mono", weight: ["400", "500"], display: "swap" });
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://songmapapp.com";
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://songmap.co";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
