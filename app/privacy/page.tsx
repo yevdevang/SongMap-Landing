@@ -15,10 +15,24 @@ export const metadata: Metadata = {
 
 const LAST_UPDATED = "May 1, 2026";
 const CONTACT_EMAIL = "support@songmap.co";
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://songmapapp.com";
+
+const BREADCRUMB_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+    { "@type": "ListItem", position: 2, name: "Privacy Policy", item: `${BASE_URL}/privacy` },
+  ],
+};
 
 export default function PrivacyPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }}
+      />
       <Navbar />
       <main className="min-h-screen pt-24 pb-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

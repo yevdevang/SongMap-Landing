@@ -53,21 +53,12 @@ export const metadata: Metadata = {
     title: "SongMap — AI Song Structure Analyzer for iOS",
     description:
       "See every Intro, Verse, Chorus, and Bridge of any song on a visual waveform timeline. Get AI-powered arrangement feedback powered by Claude.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "SongMap — AI Song Structure Analyzer",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "SongMap — AI Song Structure Analyzer for iOS",
     description:
       "See every Intro, Verse, Chorus, and Bridge of any song on a visual waveform timeline. Get AI-powered arrangement feedback powered by Claude.",
-    images: ["/og-image.png"],
     creator: "@songmapapp",
     site: "@songmapapp",
   },
@@ -106,35 +97,45 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
-              name: "SongMap",
-              applicationCategory: "MusicApplication",
-              operatingSystem: "iOS",
-              description:
-                "AI-powered song structure analyzer. Import any track, see its sections visualized on a color-coded waveform, and get AI-powered arrangement feedback.",
-              offers: [
-                {
-                  "@type": "Offer",
-                  price: "0",
-                  priceCurrency: "USD",
-                  name: "Free",
-                },
-                {
-                  "@type": "Offer",
-                  price: "7.99",
-                  priceCurrency: "USD",
-                  name: "Monthly",
-                  description: "Monthly subscription",
-                },
-              ],
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "5",
-                ratingCount: "1",
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                name: "SongMap",
+                applicationCategory: "MusicApplication",
+                operatingSystem: "iOS",
+                url: BASE_URL,
+                description:
+                  "AI-powered song structure analyzer. Import any track, see its sections visualized on a color-coded waveform, and get AI-powered arrangement feedback.",
+                offers: [
+                  {
+                    "@type": "Offer",
+                    price: "0",
+                    priceCurrency: "USD",
+                    name: "Free",
+                  },
+                  {
+                    "@type": "Offer",
+                    price: "7.99",
+                    priceCurrency: "USD",
+                    name: "Monthly",
+                    description: "Monthly subscription",
+                  },
+                ],
               },
-            }),
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "SongMap",
+                url: BASE_URL,
+                logo: `${BASE_URL}/1024.png`,
+                contactPoint: {
+                  "@type": "ContactPoint",
+                  email: "support@songmap.co",
+                  contactType: "customer support",
+                },
+              },
+            ]),
           }}
         />
       </head>

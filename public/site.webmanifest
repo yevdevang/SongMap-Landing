@@ -1,0 +1,17 @@
+{
+  "name": "SongMap",
+  "short_name": "SongMap",
+  "description": "AI Song Structure Analyzer for iOS",
+  "icons": [
+    {
+      "src": "/1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#050B14",
+  "background_color": "#050B14",
+  "display": "standalone",
+  "start_url": "/"
+}
