@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const LAST_UPDATED = "May 1, 2026";
 const CONTACT_EMAIL = "support@songmap.co";
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://songmapapp.com";
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://songmap.co";
 
 const BREADCRUMB_SCHEMA = {
   "@context": "https://schema.org",
@@ -56,7 +56,7 @@ export default function TermsPage() {
             <Section title="1. Acceptance of Terms">
               <p>
                 By downloading, installing, or using SongMap (the &quot;App&quot;) or visiting our
-                website at songmapapp.com (the &quot;Site&quot;), you agree to be bound by these Terms
+                website at songmap.co (the &quot;Site&quot;), you agree to be bound by these Terms
                 of Service (&quot;Terms&quot;). If you do not agree to these Terms, do not access or
                 use the Service.
               </p>
