@@ -62,8 +62,6 @@ export const metadata: Metadata = {
     title: "SongMap — AI Song Structure Analyzer for iOS",
     description:
       "See every Intro, Verse, Chorus, and Bridge of any song on a visual waveform timeline. Get AI-powered arrangement feedback powered by Claude.",
-    creator: "@songmapapp",
-    site: "@songmapapp",
   },
   icons: {
     icon: [
